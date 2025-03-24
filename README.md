@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Component Structure for ZefasBI Website
 
-## Getting Started
+## Layout Components
 
-First, run the development server:
+- `components/layout/Header.tsx`: Navigation bar at the top
+- `components/layout/Footer.tsx`: Footer with links and social icons
+- `components/layout/Layout.tsx`: Main layout wrapper
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## UI Components
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- `components/ui/Button.tsx`: Reusable button component with variants
+- `components/ui/Card.tsx`: Card component for solutions and portfolio items
+- `components/ui/Container.tsx`: Container with responsive padding
+- `components/ui/Section.tsx`: Section component with consistent spacing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Page-Specific Components
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `components/home/Hero.tsx`: Hero section with headline and CTA
+- `components/home/Solutions.tsx`: Solutions section with cards
+- `components/home/PortfolioBuilder.tsx`: Power BI Portfolio section
+- `components/home/WhyChooseUs.tsx`: "Why Choose Us" section with cards
+- `components/home/CTASection.tsx`: Call to action section
+- `components/home/YouTubeSubscribe.tsx`: YouTube subscription section
 
-## Learn More
+## Common Components
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `components/common/Chart.tsx`: Reusable chart component
+- `components/common/DataVisual.tsx`: Component for data visualizations
+- `components/common/IconWithText.tsx`: Component for icons with text
