@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +19,12 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <span className="text-xl font-bold text-black">reFix</span>
+              <Image
+                src="https://res.cloudinary.com/ddynvenje/image/upload/v1742835793/zefasbi/zefasbi-logo_pvjlig.svg"
+                alt="Zefas BI Logo"
+                width={96}
+                height={43}
+              />
             </Link>
           </div>
 
@@ -58,7 +66,7 @@ const Header = () => {
           <div className="hidden md:block">
             <Link
               href="/get-started"
-              className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-brand-500 hover:bg-brand-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500"
+              className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-brand-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 w-[210px] h-[60px]"
             >
               Get Started
             </Link>

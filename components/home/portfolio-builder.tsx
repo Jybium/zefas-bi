@@ -1,41 +1,60 @@
 import React from "react";
-import Button from "@/components/ui/button";
+import Image from "next/image";
 
 const PortfolioBuilder = () => {
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Left Section - Text Content */}
           <div>
-            <div className="mb-4">
-              <span className="inline-block bg-brand-100 text-brand-800 text-xs px-2 py-1 rounded-full uppercase font-semibold tracking-wide">
-                New
-              </span>
-            </div>
-            <h2 className="text-3xl font-bold mb-6">
+            <h1 className="text-4xl font-bold text-black leading-tight mb-4">
               Power BI Portfolio Builder
-            </h2>
-            <p className="text-grey-700 mb-6">
-              Create impressive data visualization portfolios that showcase your
-              analytical capabilities to clients and stakeholders. Our portfolio
-              builder makes it easy to present your insights in a professional
-              format.
+            </h1>
+            <p className="text-lg text-gray-700 mb-4">
+              Our Online Training is designed to empower your team with the
+              skills they need to create insightful dashboards and reports.
+              Whether you're just starting out or looking to sharpen your
+              expertise, we’ve got you covered.
             </p>
-            <Button href="/portfolio-builder">Learn More</Button>
+
+            <h3 className="text-lg font-semibold mb-2">What You'll Get:</h3>
+            <ul className="text-gray-700 space-y-2 mb-6">
+              <li className="flex items-center">
+                ✅ Hands-on sessions tailored to your business needs
+              </li>
+              <li className="flex items-center">
+                ✅ A portfolio that showcases your expertise with evidence-based
+                projects
+              </li>
+              <li className="flex items-center">
+                ✅ Ongoing support to help your team succeed
+              </li>
+            </ul>
+
+            {/* Price and Enroll Button */}
+            <div className="flex items-center gap-6">
+              <span className="text-xl font-semibold">
+                Price: <span className="text-green-600">$50</span>
+              </span>
+              <a
+                href="/portfolio-builder"
+                className="px-6 py-3 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition duration-300"
+              >
+                Enroll Now
+              </a>
+            </div>
           </div>
 
-          <div className="relative">
-            <div className="rounded-lg overflow-hidden shadow-xl">
-              <img
-                src="/api/placeholder/600/400"
-                alt="Power BI Portfolio Builder interface"
-                className="w-full h-auto"
-              />
-              {/* Pink circular indicator */}
-              <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                A
-              </div>
-            </div>
+          {/* Right Section - Image */}
+          <div className="rounded-lg overflow-hidden shadow-xl">
+            <Image
+              src="https://res.cloudinary.com/ddynvenje/image/upload/v1742835807/zefasbi/enrol-now_jpqxst.svg"
+              alt="Power BI Portfolio Builder"
+              className="w-full h-auto"
+              width={800}
+              height={450}
+            />
           </div>
         </div>
       </div>
