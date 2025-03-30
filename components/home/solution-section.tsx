@@ -72,9 +72,9 @@ const Solutions = () => {
                   href={solution.link}
                   legacyBehavior
                   passHref
-                  className="text-center text-green-600"
+                  className="text-center text-brand-600"
                 >
-                  <a className="inline-block text-green-600 text-center border border-green-600 text-white font-medium px-4 py-2 rounded-md hover:bg-green-700 transition w-full">
+                  <a className="inline-block text-brand-600 text-center border border-brand-600 text-white font-medium px-4 py-2 rounded-md hover:bg-brand-700 transition w-full">
                     {solution.buttonText}
                   </a>
                 </Link>

@@ -32,7 +32,7 @@ const CTASection = () => {
           <div className="mt-6">
             <a
               href="/get-started"
-              className="bg-green-700 text-white font-medium px-6 py-3 rounded-md shadow-md hover:bg-green-800 transition"
+              className="bg-brand-700 text-white font-medium px-6 py-3 rounded-md shadow-md hover:bg-brand-800 transition"
             >
               Get Started
             </a>

@@ -35,11 +35,11 @@ const PortfolioBuilder = () => {
             {/* Price and Enroll Button */}
             <div className="flex items-center gap-6">
               <span className="text-xl font-semibold">
-                Price: <span className="text-green-600">$50</span>
+                Price: <span className="text-brand-600">$50</span>
               </span>
               <a
                 href="/portfolio-builder"
-                className="px-6 py-3 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition duration-300"
+                className="px-6 py-3 bg-brand-600 text-white font-semibold rounded-lg shadow-md hover:bg-brand-700 transition duration-300"
               >
                 Enroll Now
               </a>

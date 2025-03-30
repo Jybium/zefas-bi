@@ -17,22 +17,22 @@ const WhyChooseUsComponent = () => {
       title: "Personalized Solutions",
       description:
         "Every business is different, so we tailor our services just for you.",
-      icon: <Users size={24} className="text-green-700" />,
+      icon: <Users size={24} className="text-brand-700" />,
     },
     {
       title: "Expert Team",
       description: "We’re data pros with years of experience.",
-      icon: <Users2 size={24} className="text-green-700" />,
+      icon: <Users2 size={24} className="text-brand-700" />,
     },
     {
       title: "Real Results",
       description: "We focus on driving measurable outcomes for your business.",
-      icon: <Sparkles size={24} className="text-green-700" />,
+      icon: <Sparkles size={24} className="text-brand-700" />,
     },
   ];
 
   return (
-    <section className="py-16 bg-green-50">
+    <section className="py-16 bg-brand-50">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         {/* Heading Section */}
         <div className="text-center mb-12">
@@ -47,7 +47,7 @@ const WhyChooseUsComponent = () => {
           {reasons.map((reason, index) => (
             <div key={index} className="text-center space-y-4">
               {/* Icon Box */}
-              <div className="w-14 h-14 flex items-center justify-center bg-green-100 rounded-lg mx-auto">
+              <div className="w-14 h-14 flex items-center justify-center bg-brand-100 rounded-lg mx-auto">
                 {reason.icon}
               </div>
               {/* Title & Description */}
@@ -66,14 +66,14 @@ const YoutubeSubscribe = () => {
     <section className="relative py-16 bg-[#FAFAF7]">
       {/* Decorative Circles */}
       <div className="absolute top-0 left-0 w-full h-20 bg-[url('/pattern.svg')] opacity-40"></div>
-      <div className="absolute -top-10 left-[-30px] w-24 h-24 bg-green-300 rounded-full blur-xl opacity-50"></div>
-      <div className="absolute bottom-10 right-[-30px] w-24 h-24 bg-green-300 rounded-full blur-xl opacity-50"></div>
+      <div className="absolute -top-10 left-[-10px] w-24 h-24 bg-[#D6FE67] rounded-full blur- opacity-50"></div>
+      <div className="absolute bottom-10 right-[0px] w-24 h-24 bg-[#67FE99] rounded-full blur- opacity-50"></div>
 
       {/* Main Card */}
-      <div className="max-w-3xl mx-auto px-6">
+      <div className="max-w-4xl bg-transparent mx-auto px-6 backdrop-blur-xl">
         <div className="bg-[#F3F6F1] rounded-lg shadow-lg text-center p-10">
           {/* Badge */}
-          <p className="text-green-600 font-medium italic text-sm">
+          <p className="text-brand-600 font-medium italic text-sm">
             500+ Subscribers and counting...
           </p>
 
@@ -96,7 +96,7 @@ const YoutubeSubscribe = () => {
               href="https://www.youtube.com/channel/YOUR_CHANNEL"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-700 text-white font-medium px-6 py-3 rounded-md shadow-md hover:bg-green-800 transition"
+              className="bg-brand-700 text-white font-medium px-6 py-3 rounded-md shadow-md hover:bg-brand-800 transition"
             >
               Subscribe on YouTube
             </a>

@@ -60,7 +60,7 @@ export default function Testimonials() {
             <p className="text-gray-700 mt-4">{testimonial.text}</p>
             <a
               href={testimonial.link}
-              className="text-green-600 font-semibold mt-4 inline-block"
+              className="text-brand-600 font-semibold mt-4 inline-block"
             >
               See Portfolio ↗
             </a>

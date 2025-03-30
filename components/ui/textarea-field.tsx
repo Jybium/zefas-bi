@@ -18,13 +18,13 @@ export const TextAreaField = ({
   error,
   register,
   required = false,
-  rows = 4,
+  rows = 6,
 }: TextAreaFieldProps) => {
   return (
     <div className="mb-4">
       <label
         htmlFor={id}
-        className="block text-sm font-medium text-gray-700 mb-1"
+        className="block font-semibold text-black leading-[160%] mb-2"
       >
         {label} {required && <span className="text-red-500">*</span>}
       </label>
@@ -32,9 +32,9 @@ export const TextAreaField = ({
         id={id}
         rows={rows}
         placeholder={placeholder}
-        className={`w-full px-3 py-2 border ${
+        className={`w-full px-3 py-[10px] border ${
           error ? "border-red-500" : "border-gray-300"
-        } rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500`}
+        } rounded-md shadow-sm bg-[#f2f2f2] focus:outline-none focus:ring-1 focus:ring-brand-500 focus:border-brand-500`}
         aria-invalid={error ? "true" : "false"}
         aria-describedby={error ? `${id}-error` : undefined}
         {...register}
