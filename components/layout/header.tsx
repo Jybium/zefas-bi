@@ -4,16 +4,36 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  interface NavLink {
+    href: string;
+    label: string;
+  }
+
+  const isActive = (path: string): boolean => {
+    return pathname === path;
+  };
+
+  // Navigation links configuration
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About Us" },
+    { href: "/services", label: "Solutions" },
+    { href: "/training", label: "Training" },
+    { href: "/contact", label: "Why choose us" },
+  ];
+
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-[#EFF3E6] sticky top-0 z-50">
       <div className="px-4 sm:px-6 lg:px-20 py-5">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -30,36 +50,19 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-12">
-            <Link
-              href="/"
-              className="text-grey-900 hover:text-brand-500 px-3 py-2 text-sm font-medium"
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="text-grey-900 hover:text-brand-500 px-3 py-2 text-sm font-medium"
-            >
-              About Us
-            </Link>
-            <Link
-              href="/services"
-              className="text-grey-900 hover:text-brand-500 px-3 py-2 text-sm font-medium"
-            >
-              Solutions
-            </Link>
-            <Link
-              href="/blog"
-              className="text-grey-900 hover:text-brand-500 px-3 py-2 text-sm font-medium"
-            >
-              Training
-            </Link>
-            <Link
-              href="/contact"
-              className="text-grey-900 hover:text-brand-500 px-3 py-2 text-sm font-medium"
-            >
-              Why choose us
-            </Link>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`px-3 py-2 text-sm font-medium ${
+                  isActive(link.href)
+                    ? "text-brand-500 bg-opacity-10 underline underline-offset-4"
+                    : "text-grey-900 hover:text-brand-500"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </nav>
 
           {/* CTA Button */}
@@ -94,44 +97,34 @@ const Header = () => {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden" id="mobile-menu">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link
-              href="/"
-              className="text-grey-900 hover:text-brand-500 block px-3 py-2 text-base font-medium"
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="text-grey-900 hover:text-brand-500 block px-3 py-2 text-base font-medium"
-            >
-              About
-            </Link>
-            <Link
-              href="/services"
-              className="text-grey-900 hover:text-brand-500 block px-3 py-2 text-base font-medium"
-            >
-              Services
-            </Link>
-            <Link
-              href="/blog"
-              className="text-grey-900 hover:text-brand-500 block px-3 py-2 text-base font-medium"
-            >
-              Blog
-            </Link>
-            <Link
-              href="/contact"
-              className="text-grey-900 hover:text-brand-500 block px-3 py-2 text-base font-medium"
-            >
-              Contact Us
-            </Link>
-            <Link
-              href="/contact-us"
-              className="block w-full text-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-brand-500 hover:bg-brand-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 mt-4"
-            >
-              Contact Us
-            </Link>
+        <div
+          className="md:hidden fixed inset-0 top-[106px] bg-[#EFF3E6] z-40"
+          id="mobile-menu"
+        >
+          <div className="px-2 pt-4 pb-3 space-y-4 sm:px-3 h-full flex flex-col">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`px-3 py-3 text-base font-medium ${
+                  isActive(link.href)
+                    ? "text-brand-500 bg-brand-500 bg-opacity-10 underline underline-offset-4"
+                    : "text-grey-900 hover:text-brand-500"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <div className="mt-auto pb-8">
+              <Link
+                href="/contact-us"
+                className="block w-full text-center px-4 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black hover:bg-brand-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 mt-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
         </div>
       )}

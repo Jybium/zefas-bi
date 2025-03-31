@@ -89,3 +89,10 @@ label {
   color: var(--color-black);
   line-height: 160%;
 }
+
+
+input[type="checkbox"]:active,
+input[type="checkbox"]:focus, input[type="checkbox"]:focus-visible, input[type="checkbox"]:checked {
+  outline: none;
+  background-color: #043815;
+}
