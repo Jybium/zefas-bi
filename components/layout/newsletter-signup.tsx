@@ -27,12 +27,12 @@ export const NewsletterSignup = () => {
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex border border-brand-100 py-[10px] px-4 rounded"
+        className="flex border border-brand-100 py-[10px] px-2 lg:px-4 rounded"
       >
         <input
           type="email"
           placeholder="Enter your email address"
-          className="flex-grow px-3 rounded-l focus:outline-none focus:ring-0 focus:ring-brand-500 focus:border-brand-500 bg-transparent"
+          className="flex-grow px-2 lg:px-3 rounded-l focus:outline-none focus:ring-0 focus:ring-brand-500 focus:border-brand-500 bg-transparent"
           {...register("email", {
             required: "Email is required",
             pattern: {
@@ -43,7 +43,7 @@ export const NewsletterSignup = () => {
         />
         <button
           type="submit"
-          className="bg-brand-600 p-3 font-medium text-sm text-white px-4 py-2 h-[40px] w-[171px] rounded hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
+          className="bg-brand-600 lg:p-3 font-medium text-sm text-white px-4 py-2 h-[40px] w-[171px] rounded hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
         >
           Subscribe Now
         </button>

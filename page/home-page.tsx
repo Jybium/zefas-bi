@@ -32,7 +32,7 @@ const WhyChooseUsComponent = () => {
   ];
 
   return (
-    <section className="py-16 bg-brand-50">
+    <section className="py-16 bg-[#FCFFF5]">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         {/* Heading Section */}
         <div className="text-center mb-12">
@@ -47,9 +47,10 @@ const WhyChooseUsComponent = () => {
           {reasons.map((reason, index) => (
             <div key={index} className="text-center space-y-4">
               {/* Icon Box */}
-              <div className="w-14 h-14 flex items-center justify-center bg-brand-100 rounded-lg mx-auto">
+              <div className="relative w-14 h-14 flex items-center justify-center bg-brand-50 rounded-lg shadow-md mx-auto before:absolute before:inset-0 before:-z-10 before:rounded-lg before:bg-gradient-to-r before:from-[#EAFEBA] before:to-[#C5F550] before:p-[2px]">
                 {reason.icon}
               </div>
+
               {/* Title & Description */}
               <h3 className="text-xl font-semibold">{reason.title}</h3>
               <p className="text-gray-600">{reason.description}</p>
@@ -63,44 +64,37 @@ const WhyChooseUsComponent = () => {
 
 const YoutubeSubscribe = () => {
   return (
-    <section className="relative py-16 bg-[#FAFAF7]">
+    <section className="relative py-16 px-4 lg:px-20 overflow-hidden">
       {/* Decorative Circles */}
-      <div className="absolute top-0 left-0 w-full h-20 bg-[url('/pattern.svg')] opacity-40"></div>
-      <div className="absolute -top-10 left-[-10px] w-24 h-24 bg-[#D6FE67] rounded-full blur- opacity-50"></div>
-      <div className="absolute bottom-10 right-[0px] w-24 h-24 bg-[#67FE99] rounded-full blur- opacity-50"></div>
+      <div className="absolute -left-10 top-24 w-20 h-20 lg:w-40 lg:h-40 bg-[#D6FE67] rounded-full opacity-50"></div>
+      <div className="absolute -right-10 overflow-hidden bottom-24 w-20 h-20 lg:w-40 lg:h-40 bg-[#67FE99] rounded-full opacity-50"></div>
 
-      {/* Main Card */}
-      <div className="max-w-4xl bg-transparent mx-auto px-6 backdrop-blur-xl">
-        <div className="bg-[#F3F6F1] rounded-lg shadow-lg text-center p-10">
-          {/* Badge */}
-          <p className="text-brand-600 font-medium italic text-sm">
-            500+ Subscribers and counting...
-          </p>
+      <div className="px-4 py-20 lg:py-32 text-center bg-[#0986330A] backdrop-blur-xl rounded-lg">
+        {/* Badge */}
+        <p className="text-green-600 text-sm font-medium">
+          500+ Subscribers and counting...
+        </p>
 
-          {/* Heading */}
-          <h2 className="text-3xl font-semibold text-gray-900 mt-2 flex items-center justify-center gap-2">
-            Subscribe to Our YouTube{" "}
-            <FaYoutube className="text-red-600 text-3xl" />
-            Channel
-          </h2>
+        {/* Heading */}
+        <h2 className="text-3xl font-semibold text-gray-900 mt-2 grid lg:flex items-center justify-center gap-2">
+          Subscribe to Our YouTube{" "}
+          <span className="text-red-600 rounded-md text-6xl mx-auto lg:mx-0">
+            <FaYoutube />
+          </span>{" "}
+          Channel
+        </h2>
 
-          {/* Description */}
-          <p className="text-gray-600 mt-2">
-            Join our YouTube community for practical tips, how-to guides, and
-            real-world insights on using data to grow your business.
-          </p>
+        {/* Description */}
+        <p className="text-gray-600 mt-2 max-w-2xl mx-auto">
+          Join our YouTube community for practical tips, how-to guides, and
+          real-world insights on using data to grow your business.
+        </p>
 
-          {/* Subscribe Button */}
-          <div className="mt-6">
-            <a
-              href="https://www.youtube.com/channel/YOUR_CHANNEL"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-brand-700 text-white font-medium px-6 py-3 rounded-md shadow-md hover:bg-brand-800 transition"
-            >
-              Subscribe on YouTube
-            </a>
-          </div>
+        {/* Subscribe Button */}
+        <div className="mt-6">
+          <Button href="https://www.youtube.com/channel/YOUR_CHANNEL">
+            Subscribe on YouTube
+          </Button>
         </div>
       </div>
     </section>
@@ -120,10 +114,11 @@ export default function HomePage() {
       </Head>
 
       <Hero />
-      <section className="pb-12 bg-white">
-        <div className="flex items-center gap-x-11 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8">
-            <h2 className="text-3xl lg:text-5xl font-bold leading-[140%]">
+
+      <section className="py-12">
+        <div className="flex flex-col lg:flex-row lg:items-center gap-y-9 lg:gap-y-0 lg:gap-x-11 px-4 sm:px-6 lg:px-20">
+          <div className="space-y-8 lg:w-1/2">
+            <h2 className="text-3xl lg:text-5xl font-bold leading-[1.4]">
               We Make Data Work for You...
             </h2>
             <p className="text-grey-700 text-lg max-w-3xl mx-auto leading-[170%]">
@@ -137,20 +132,31 @@ export default function HomePage() {
             </Button>
           </div>
 
-          <Image
-            src="https://res.cloudinary.com/ddynvenje/image/upload/v1742851543/zefasbi/chart_fizf8y.svg"
-            alt="Data chart"
-            width={622}
-            height={534}
-            className="mx-auto"
-          />
+          <div className="lg:w-1/2">
+            <Image
+              src="https://res.cloudinary.com/ddynvenje/image/upload/v1742851543/zefasbi/chart_fizf8y.svg"
+              alt="Data chart"
+              width={622}
+              height={534}
+              className="mx-auto"
+            />
+          </div>
         </div>
       </section>
       <Solutions />
       <PortfolioBuilder />
       <Testimonials />
       <WhyChooseUsComponent />
-      <CTASection />
+      <div className="px-4 lg:px-20">
+        <CTASection />
+      </div>
+      <Image
+        src="https://res.cloudinary.com/ddynvenje/image/upload/v1743470457/zefasbi/Frame_1618868642_fzzwhy.svg"
+        alt="demarcating line"
+        width={1240}
+        height={24}
+        className="w-full h-auto"
+      />
       <YoutubeSubscribe />
     </>
   );

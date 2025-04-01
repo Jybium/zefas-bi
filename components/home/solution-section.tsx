@@ -33,8 +33,8 @@ const Solutions = () => {
   ];
 
   return (
-    <section className="py-16 bg-[#FAFAF7]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 bg-[#FCFFF5]">
+      <div className="px-4 sm:px-6 lg:px-20">
         {/* Section Title */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-semibold text-gray-900">
@@ -48,7 +48,10 @@ const Solutions = () => {
         {/* Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+            <div
+              key={index}
+              className="bg-transparent p-6 rounded-lg shadow-md flex flex-col justify-between"
+            >
               {/* Image */}
               <div className="mb-4">
                 <Image
@@ -74,7 +77,7 @@ const Solutions = () => {
                   passHref
                   className="text-center text-brand-600"
                 >
-                  <a className="inline-block text-brand-600 text-center border border-brand-600 text-white font-medium px-4 py-2 rounded-md hover:bg-brand-700 transition w-full">
+                  <a className="flex items-center justify-center text-brand-600 bg-brand-50 h-[60px] text-center border border-brand-600 hover:text-white font-medium rounded-md hover:bg-brand-700 transition w-full">
                     {solution.buttonText}
                   </a>
                 </Link>
