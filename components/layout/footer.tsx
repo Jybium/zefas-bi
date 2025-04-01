@@ -14,8 +14,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-b from-[#FAFFFC] to-[#E1FFEB] text-grey-900 pt-12 px-4 xl:px-20 pb-14">
-      <div className="mx-auto grid lg:flex lg:justify-between gap-8">
+    <footer className="bg-gradient-to-b from-[#FAFFFC] to-[#E1FFEB] text-grey-900 py-12 px-4 xl:px-20">
+      <div className="mx-auto grid lg:flex lg:justify-between gap-8 pb-9">
         {/* Company Info */}
         <div className="space-y-4">
           <div className="flex items-center">
@@ -30,7 +30,6 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <p className="text-sm">Make smarter decisions, faster.</p>
           <div className="flex space-x-4">
             <Link
               href="https://instagram.com"

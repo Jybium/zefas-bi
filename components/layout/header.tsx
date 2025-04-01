@@ -27,14 +27,14 @@ const Header = () => {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
-    { href: "/services", label: "Solutions" },
+    { href: "/solutions", label: "Solutions" },
     { href: "/training", label: "Training" },
     { href: "/contact", label: "Why choose us" },
   ];
 
   return (
     <header className="bg-[#EFF3E6] sticky top-0 z-50">
-      <div className="px-4 sm:px-6 lg:px-20 py-5">
+      <div className="px-4 sm:px-6 lg:px-20 py-[10px] lg:py-5">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -98,7 +98,7 @@ const Header = () => {
       {/* Mobile menu */}
       {isMenuOpen && (
         <div
-          className="md:hidden fixed inset-0 top-[106px] bg-[#EFF3E6] z-40"
+          className="md:hidden fixed inset-0 px-4 top-[106px] bg-[#EFF3E6] z-40"
           id="mobile-menu"
         >
           <div className="px-2 pt-4 pb-3 space-y-4 sm:px-3 h-full flex flex-col">
@@ -108,7 +108,7 @@ const Header = () => {
                 href={link.href}
                 className={`px-3 py-3 text-base font-medium ${
                   isActive(link.href)
-                    ? "text-brand-500 bg-brand-500 bg-opacity-10 underline underline-offset-4"
+                    ? "text-brand-500 bg-opacity-10 underline underline-offset-4"
                     : "text-grey-900 hover:text-brand-500"
                 }`}
                 onClick={() => setIsMenuOpen(false)}
