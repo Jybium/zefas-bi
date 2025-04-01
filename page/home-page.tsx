@@ -127,7 +127,7 @@ export default function HomePage() {
               and SQL, we create easy-to-understand reports and dashboards that
               help you work smarter, not harder.
             </p>
-            <Button href="/contact" size="lg" className="">
+            <Button href="/get-started" size="lg" className="">
               Get Started
             </Button>
           </div>
