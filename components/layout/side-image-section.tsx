@@ -15,15 +15,17 @@ export const SideImageSection = ({
   pageText,
 }: SideImageSectionProps) => {
   return (
-    <div className="hidden lg:block lg:w-1/2 relative space-y-5">
+    <div className="lg:w-1/2 relative space-y-5">
       <div className="space-y-3">
-        <h2 className="text-black font-semibold text-6xl leading-[100%]">
+        <h2 className="text-black font-semibold text-3xl lg:text-6xl leading-[100%]">
           {pageTitle}
         </h2>
-        <p className="text-grey-900 text-xl leading-[160%]">{pageText}</p>
+        <p className="text-grey-900 tex-base lg:text-xl leading-[160%]">
+          {pageText}
+        </p>
       </div>
 
-      <div className="relative h-[732px]">
+      <div className="relative h-[732px] hidden lg:block ">
         <Image
           src={imageSrc}
           alt={imageAlt}

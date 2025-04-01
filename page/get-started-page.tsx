@@ -32,7 +32,8 @@ const countryOptions = [
   { value: "au", label: "Australia" },
   { value: "de", label: "Germany" },
   { value: "fr", label: "France" },
-  // Add more countries as needed
+  { value: "it", label: "Italy" },
+  { value: "ng", label: "Nigeria" },
 ];
 
 // Solutions options
