@@ -1,5 +1,6 @@
 "use client";
 
+import { ProfileCircle } from "iconsax-react";
 import Image from "next/image";
 
 const testimonials = [
@@ -26,9 +27,18 @@ const testimonials = [
   },
 ];
 
+const getRandomColor = () => {
+  const letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
 export default function Testimonials() {
   return (
-    <section className="py-16 px-6 text-center bg-white">
+    <section className="py-16 px-4 lg:px-20 text-center bg-white">
       <h2 className="text-4xl font-bold text-gray-900">
         What do Our Students Say?
       </h2>
@@ -43,12 +53,17 @@ export default function Testimonials() {
             className="bg-gray-100 p-6 rounded-lg shadow-sm text-left"
           >
             <div className="flex items-center gap-3">
-              <Image
+              {/* <Image
                 src={testimonial.image}
                 alt={testimonial.name}
                 width={40}
                 height={40}
                 className="rounded-full"
+              /> */}
+              <ProfileCircle
+                size="40"
+                color={getRandomColor()}
+                variant="Bulk"
               />
               <div>
                 <h3 className="font-semibold text-gray-900">
@@ -60,7 +75,7 @@ export default function Testimonials() {
             <p className="text-gray-700 mt-4">{testimonial.text}</p>
             <a
               href={testimonial.link}
-              className="text-green-600 font-semibold mt-4 inline-block"
+              className="text-brand-600 font-semibold mt-4 inline-block"
             >
               See Portfolio ↗
             </a>

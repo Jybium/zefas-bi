@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="bg-white py-12 md:pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+    <section className="py-12 md:pt-20">
+      <div className="px-4 sm:px-6 lg:px-20 space-y-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-end">
           {/* Left content */}
           <div>
@@ -40,7 +40,7 @@ const Hero = () => {
             <Image
               src="https://res.cloudinary.com/ddynvenje/image/upload/v1742835793/zefasbi/hero-section_s3scjx.svg"
               alt="Data dashboard example"
-              height={492}
+              height={692}
               width={1280}
               className="w-full h-full"
             />

@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import Button from "../ui/button";
 
 const CTASection = () => {
   return (
     <section className="py-16 bg-[#FAFAF7]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center">
+      <div className="flex flex-col lg:flex-row items-center">
         {/* Left - Image Section */}
         <div className="w-full lg:w-1/2 relative">
           <div className="bg-white shadow-lg rounded-lg p-4">
@@ -19,7 +20,7 @@ const CTASection = () => {
         </div>
 
         {/* Right - Text Content */}
-        <div className="w-full lg:w-1/2 mt-10 lg:mt-0 lg:pl-12 text-center lg:text-left">
+        <div className="w-full lg:w-1/2 mt-10 lg:mt-0 lg:pl-12 text-left lg:text-left">
           <h2 className="text-3xl font-bold text-gray-900 leading-snug">
             Ready to See the <br className="hidden md:block" />
             Power of Your Data?
@@ -30,12 +31,12 @@ const CTASection = () => {
 
           {/* Button */}
           <div className="mt-6">
-            <a
+            <Button
               href="/get-started"
-              className="bg-green-700 text-white font-medium px-6 py-3 rounded-md shadow-md hover:bg-green-800 transition"
+              className="bg-brand-500 text-white font-medium px-6 py-3 h-[60px] rounded-md shadow-md hover:bg-brand-800 transition"
             >
               Get Started
-            </a>
+            </Button>
           </div>
         </div>
       </div>
