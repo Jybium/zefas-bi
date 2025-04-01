@@ -23,7 +23,7 @@ export const PageLayout = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="min-h-screen flex flex-col p-20">
+      <div className="min-h-screen flex flex-col px-4 pt-6 pb-20 lg:p-20">
         <main className="flex-grow">{children}</main>
       </div>
     </>
