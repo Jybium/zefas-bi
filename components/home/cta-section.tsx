@@ -1,35 +1,42 @@
 import React from "react";
-import Button from "@/components/ui/button";
+import Image from "next/image";
+import Button from "../ui/button";
 
 const CTASection = () => {
   return (
-    <section className="py-12 md:py-20 bg-grey-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold mb-4">
-            Ready to See the Power of Your Data?
+    <section className="py-16 bg-[#FAFAF7]">
+      <div className="flex flex-col lg:flex-row items-center">
+        {/* Left - Image Section */}
+        <div className="w-full lg:w-1/2 relative">
+          <div className="bg-white shadow-lg rounded-lg p-4">
+            <Image
+              height={440}
+              width={601}
+              src="https://res.cloudinary.com/ddynvenje/image/upload/v1742835778/zefasbi/call-to-action_sd6mfp.svg"
+              alt="Data visualization chart"
+              className="w-full h-auto rounded-md"
+            />
+          </div>
+        </div>
+
+        {/* Right - Text Content */}
+        <div className="w-full lg:w-1/2 mt-10 lg:mt-0 lg:pl-12 text-left lg:text-left">
+          <h2 className="text-3xl font-bold text-gray-900 leading-snug">
+            Ready to See the <br className="hidden md:block" />
+            Power of Your Data?
           </h2>
-          <p className="text-grey-700 text-lg max-w-3xl mx-auto">
-            Start transforming your business today with data-driven insights and
-            intelligent analytics solutions.
+          <p className="text-gray-600 mt-3">
+            Let’s work together to turn your data into decisions that matter.
           </p>
-        </div>
 
-        <div className="flex justify-center">
-          <Button href="/get-started" size="lg">
-            Get Started
-          </Button>
-        </div>
-
-        <div className="mt-12">
-          <div className="bg-white rounded-lg shadow-md p-6 max-w-4xl mx-auto">
-            <div className="flex justify-center mb-4">
-              <img
-                src="/api/placeholder/600/200"
-                alt="Data visualization chart"
-                className="w-full max-w-lg h-auto"
-              />
-            </div>
+          {/* Button */}
+          <div className="mt-6">
+            <Button
+              href="/get-started"
+              className="bg-brand-500 text-white font-medium px-6 py-3 h-[60px] rounded-md shadow-md hover:bg-brand-800 transition"
+            >
+              Get Started
+            </Button>
           </div>
         </div>
       </div>
