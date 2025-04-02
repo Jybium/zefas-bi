@@ -29,7 +29,7 @@ const Header = () => {
     { href: "/about", label: "About Us" },
     { href: "/solutions", label: "Solutions" },
     { href: "/training", label: "Training" },
-    { href: "/contact", label: "Why choose us" },
+    { href: "/#why-choose-us", label: "Why choose us" },
   ];
 
   return (

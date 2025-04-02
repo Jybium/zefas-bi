@@ -1,5 +1,5 @@
-// components/layout/NewsletterSignup.tsx
 import React from "react";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 
 interface NewsletterFormData {
@@ -41,12 +41,14 @@ export const NewsletterSignup = () => {
             },
           })}
         />
-        <button
-          type="submit"
-          className="bg-brand-600 lg:p-3 font-medium text-sm text-white px-4 py-2 h-[40px] w-[171px] rounded hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
-        >
-          Subscribe Now
-        </button>
+        <Link href="https://medium.com/@rxmufasa ">
+          <button
+            type="submit"
+            className="bg-brand-600 lg:p-3 font-medium text-sm text-white px-4 py-2 h-[40px] w-[171px] rounded hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
+          >
+            Subscribe Now
+          </button>
+        </Link>
       </form>
       {errors.email && (
         <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>

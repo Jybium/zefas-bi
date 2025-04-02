@@ -32,7 +32,7 @@ const WhyChooseUsComponent = () => {
   ];
 
   return (
-    <section className="py-16 bg-[#FCFFF5]">
+    <section className="py-16 bg-[#FCFFF5]" id="why-choose-us">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         {/* Heading Section */}
         <div className="text-center mb-12">

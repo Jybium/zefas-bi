@@ -9,7 +9,7 @@ const Solutions = () => {
         "We design and develop intuitive, interactive, and data-driven reports that enable you to visualize your business performance and uncover growth opportunities.",
       image:
         "https://res.cloudinary.com/ddynvenje/image/upload/v1742835792/zefasbi/power-bi-report-solution_lfv0xu.svg",
-      link: "/solutions/power-bi",
+      link: "/solutions/#power-bi-business-reports",
       buttonText: "Explore Projects",
     },
     {
@@ -18,7 +18,7 @@ const Solutions = () => {
         "Seamlessly integrate Microsoft Fabric into your analytics ecosystem to unlock advanced data processing, storage, and management capabilities.",
       image:
         "https://res.cloudinary.com/ddynvenje/image/upload/v1742835783/zefasbi/microsoft-fabric-report-solution_qdwv67.svg",
-      link: "/solutions/microsoft-integration",
+      link: "/solutions/#microsoft-fabric-integration",
       buttonText: "Explore Projects",
     },
     {
@@ -27,7 +27,7 @@ const Solutions = () => {
         "Empower your teams with the skills they need to master Power BI. Our tailored training programs are designed to meet the unique needs of your organization.",
       image:
         "https://res.cloudinary.com/ddynvenje/image/upload/v1742835795/zefasbi/corporate-training-solution_deadoq.svg",
-      link: "/solutions/enterprise-planning",
+      link: "/solutions/#corporate-power-bi-training",
       buttonText: "See Reviews from Clients",
     },
   ];
