@@ -44,7 +44,7 @@ const Footer = () => {
               />
             </Link>
             <Link
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/106108978/admin/dashboard"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -68,7 +68,7 @@ const Footer = () => {
               />
             </Link>
             <Link
-              href="https://twitter.com"
+              href="https://x.com/RxDono"
               target="_blank"
               rel="noopener noreferrer"
             >

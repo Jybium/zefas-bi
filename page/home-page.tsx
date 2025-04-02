@@ -92,7 +92,7 @@ const YoutubeSubscribe = () => {
 
         {/* Subscribe Button */}
         <div className="mt-6">
-          <Button href="https://www.youtube.com/channel/YOUR_CHANNEL">
+          <Button href="https://www.youtube.com/@ZefasBi-Analytics">
             Subscribe on YouTube
           </Button>
         </div>
