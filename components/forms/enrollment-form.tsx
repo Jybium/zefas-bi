@@ -113,7 +113,7 @@ export const EnrollmentForm: React.FC = () => {
             <Calendar className="h-4 w-4 mr-2" />
             <span className="text-sm">
               Event Timing:{" "}
-              <span className="font-semibold">January 25th, 2025</span>
+              <span className="font-semibold">April 12 , 2025</span>
             </span>
           </div>
 
@@ -121,7 +121,7 @@ export const EnrollmentForm: React.FC = () => {
             <MapPin className="h-4 w-4 mr-2" />
             <span className="text-sm">
               Event Address:
-              <span className="font-semibold">Google Meet</span>
+              <span className="font-semibold">MS Teams</span>
             </span>
           </div>
 
@@ -130,7 +130,7 @@ export const EnrollmentForm: React.FC = () => {
 
             <span className="text-sm">
               Contact Us:
-              <span className="font-semibold">+2349047970573</span>
+              <span className="font-semibold">+2348063141631</span>
             </span>
           </div>
         </div>
