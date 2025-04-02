@@ -54,6 +54,7 @@ export const EnrollmentForm: React.FC = () => {
     handleSubmit,
     control,
     watch,
+    reset,
     formState: { errors, isValid },
   } = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -112,6 +113,9 @@ export const EnrollmentForm: React.FC = () => {
 
         // Scroll to top after form submission
         window.scrollTo({ top: 0, behavior: "smooth" });
+
+        // Reset the form after successful submission
+        reset();
       }
     } catch (error: any) {
       console.error("Error submitting form:", error);
