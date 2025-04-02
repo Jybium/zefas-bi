@@ -21,77 +21,136 @@ const SolutionsPage = () => {
     { id: "corporate-power-bi-training", name: "Corporate Power BI Training" },
   ];
 
-  // Solution categories
-  const solutions = [
-    {
-      id: "financial-reports",
-      title: "Financial Business Reports",
-      description:
-        "Comprehensive financial analytics and reporting solutions for businesses of all sizes.",
-      industries: ["all", "finance"],
-      image: "/api/placeholder/400/200",
-      isHighlighted: true,
-    },
-    {
-      id: "sales-analytics",
-      title: "Sales Performance Analytics",
-      description:
-        "Track and optimize your sales performance with interactive dashboards and reports.",
-      industries: ["all", "retail", "finance"],
-      image: "/api/placeholder/400/200",
-    },
-    {
-      id: "inventory-management",
-      title: "Inventory Management Solutions",
-      description:
-        "Real-time inventory tracking and optimization tools for better resource management.",
-      industries: ["all", "retail", "manufacturing"],
-      image: "/api/placeholder/400/200",
-    },
-    {
-      id: "ms-data-integration",
-      title: "Microsoft Data Integration",
-      description:
-        "Seamless integration with Microsoft's data ecosystem including Power BI, Azure, and Excel.",
-      industries: ["all"],
-      image: "/api/placeholder/400/200",
-    },
-    {
-      id: "data-warehousing",
-      title: "Data Warehousing Solutions",
-      description:
-        "Build robust data warehouses for consolidated reporting and analytics.",
-      industries: ["all", "finance", "healthcare", "retail", "manufacturing"],
-      image: "/api/placeholder/400/200",
-    },
-    {
-      id: "healthcare-analytics",
-      title: "Healthcare Analytics Suite",
-      description:
-        "Specialized analytics solutions for healthcare providers and insurers.",
-      industries: ["all", "healthcare"],
-      image: "/api/placeholder/400/200",
-    },
-  ];
-
   const powerBIReports = [
     {
       id: 1,
-      title: "Financial Dashboard",
-      description: "A little description of what this is about",
+      title: "E-Commerce Sales KPI Report",
+      description:
+        "The project helped the client identify profitability drivers, optimize sales strategies, and target high-performing segments. Insights led to a 15% profit margin, 20% sales growth, and 30% corporate segment growth. High-performing markets exceeding $400K in sales were identified, while underperforming regions were addressed.",
       image: "/api/placeholder/600/350",
+      link: (
+        <iframe
+          title="Okeh Efasa E- Commerce Report"
+          width="1280"
+          className="absolute top-0 left-0 w-full h-full border-none"
+          height="373.5"
+          src="https://app.powerbi.com/view?r=eyJrIjoiOWVkMjRmMmUtNTQzOC00ZTQwLWJkZTUtYzY5ZDg0YjgwNGQxIiwidCI6IjZlMjY5MzE1LWM2NTAtNDM3Zi1iMzE3LTFhODQyOWRlZjM3MyJ9"
+          // frameborder="0"
+          allowFullScreen={true}
+        ></iframe>
+      ),
     },
     {
       id: 2,
-      title: "Sales Analytics",
-      description: "A little description of what this is about",
+      title: "Electronic Products Ratings and Reviews Analysis",
+      description:
+        "The project helped the client understand how reviews and ratings influence product sales and brand popularity. By analyzing diverse product and brand reviews, I identified top-performing and highly recommended products. This insight enabled the client to optimize their product offerings and marketing strategies.",
       image: "/api/placeholder/600/350",
+      link: (
+        <iframe
+          title="Electronics Rating"
+          width="1280"
+          height="373.5"
+          className="absolute top-0 left-0 w-full h-full border-none"
+          src="https://app.powerbi.com/view?r=eyJrIjoiM2RkOWJiN2ItMDIyZi00ODMyLThhYzAtOWJiODMwZTI2YmIwIiwidCI6IjZlMjY5MzE1LWM2NTAtNDM3Zi1iMzE3LTFhODQyOWRlZjM3MyJ9"
+          // frameborder="0"
+          allowFullScreen={true}
+        ></iframe>
+      ),
     },
     {
       id: 3,
-      title: "Executive Overview",
-      description: "A little description of what this is about",
+      title: "Comprehensive Supply Chain Management Report",
+      description:
+        "The report provided key insights into supply chain performance, helping the client optimize operations. It evaluated supply efficiency, manufacturing capacity, defect rates, logistics, and inventory management. Additionally, it identified sales and profitability drivers across products, regions, and customer segments.",
       image: "/api/placeholder/600/350",
+      link: (
+        <iframe
+          title="Supplychain Okeh Efasa"
+          width="1280"
+          height="373.5"
+          className="absolute top-0 left-0 w-full h-full border-none"
+          src="https://app.powerbi.com/view?r=eyJrIjoiYzUyMTlhMDEtYmFkNS00NmUzLWFmMTItMzFiMjZlZDE2OGVkIiwidCI6IjZlMjY5MzE1LWM2NTAtNDM3Zi1iMzE3LTFhODQyOWRlZjM3MyJ9"
+          // frameborder="0"
+          allowFullScreen={true}
+        ></iframe>
+      ),
+    },
+    {
+      id: 4,
+      title:
+        "Marketing Campaign Analysis Channel Performance and Traffic Analysis",
+      description:
+        "The report helped the client track campaign success across channels and locations using key KPIs. It measured performance through Conversion Rate, Engagement Rate, and ROAS, assessing user actions and revenue. Visibility and engagement were analyzed using Impressions, Clicks, and CTR.",
+      image: "/api/placeholder/600/350",
+      link: (
+        <iframe
+          title="Marketing Campaign Analysis"
+          width="1280"
+          className="absolute top-0 left-0 w-full h-full border-none"
+          height="373.5"
+          src="https://app.powerbi.com/view?r=eyJrIjoiNzYwYmI5NzAtODRiMC00ZWViLWIxNTktN2U4YjBiMGE5YjQ0IiwidCI6IjZlMjY5MzE1LWM2NTAtNDM3Zi1iMzE3LTFhODQyOWRlZjM3MyJ9"
+          // frameborder="0"
+          allowFullScreen={true}
+        ></iframe>
+      ),
+    },
+    {
+      id: 5,
+      title: "HR - Employee Productivity Dashboard",
+      description:
+        "This project helped HR by providing a three-page report analyzing workforce demographics, performance, and key trends. It examined gender equality, pay bias, and productivity using weighted metrics for performance and productivity. Key KPI trends like retention, turnover, and attendance rates were also evaluated.",
+      image: "/api/placeholder/600/350",
+      link: (
+        <iframe
+          title="Employee Productivity Okeh Efasa"
+          className="absolute top-0 left-0 w-full h-full border-none"
+          width="1280"
+          height="373.5"
+          src="https://app.powerbi.com/view?r=eyJrIjoiZTkzOGJmMmUtOTk1Zi00MmJhLTg3NTItYTllYWMwYjYxNTBiIiwidCI6IjZlMjY5MzE1LWM2NTAtNDM3Zi1iMzE3LTFhODQyOWRlZjM3MyJ9"
+          // frameborder="0"
+          allowFullScreen={true}
+        ></iframe>
+      ),
+    },
+  ];
+
+  const microsoftFabricIntegration = [
+    {
+      id: 1,
+      title: "Bank Risk Assessment and Performance Report",
+      description:
+        "Aurora Bank used the report for insights into loan activities, risk assessment, and customer behavior. It identified demographic patterns, assessed financial health through Debt-to-Income Ratios, and analyzed transaction trends to guide strategy.",
+      image: "/api/placeholder/600/350",
+      link: (
+        <iframe
+          title="Aurora_Bank - Efasa"
+          width="600"
+          height="373.5"
+          className="absolute top-0 left-0 w-full h-full border-none"
+          src="https://app.powerbi.com/view?r=eyJrIjoiYzMwZjJmMjgtMGE3OC00MzYxLThkNmUtMWI2ZDcwYTI1NDZiIiwidCI6IjZlMjY5MzE1LWM2NTAtNDM3Zi1iMzE3LTFhODQyOWRlZjM3MyJ9"
+          // frameBorder={0}
+          allowFullScreen={true}
+        ></iframe>
+      ),
+    },
+    {
+      id: 2,
+      title: "Finance Report ",
+      description:
+        "This project provided a comprehensive analysis of key financial KPIs, offering insights into revenue, profitability, costs, and growth trends. It covered revenue by business line, profit margins, operational efficiency, and expense breakdowns. The report helped the fitness company track performance and optimize financial strategies.",
+      image: "/api/placeholder/600/350",
+      link: (
+        <iframe
+          title="Sport Finance Overview"
+          width="1280"
+          height="373.5"
+          className="absolute top-0 left-0 w-full h-full border-none"
+          src="https://app.powerbi.com/view?r=eyJrIjoiMTI4ZDk3ZDMtYmQxNi00OTdhLWJiZjYtZjU2OTgzMGRjMjE3IiwidCI6IjZlMjY5MzE1LWM2NTAtNDM3Zi1iMzE3LTFhODQyOWRlZjM3MyJ9"
+          // frameborder="0"
+          allowFullScreen={true}
+        ></iframe>
+      ),
     },
   ];
 
@@ -168,7 +227,7 @@ const SolutionsPage = () => {
           <SolutionDetail
             title="Microsoft Fabric Integration"
             text="Seamlessly integrate Microsoft Fabric into your analytics ecosystem to unlock advanced data processing, storage, and management capabilities."
-            reports={powerBIReports}
+            reports={microsoftFabricIntegration}
           />
 
           <Image
