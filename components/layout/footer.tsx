@@ -89,25 +89,25 @@ const Footer = () => {
       <div className="grid lg:flex justify-between gap-5 lg:gap-24 mt-10 lg:text-center text-xs">
         <nav className="hidden md:flex space-x-12">
           <Link
-            href="/about"
+            href="/#about-us"
             className="text-grey-900 hover:text-brand-500 px-3 py-2 text-sm font-medium"
           >
             About Us
           </Link>
           <Link
-            href="/services"
+            href="/solutions"
             className="text-grey-900 hover:text-brand-500 px-3 py-2 text-sm font-medium"
           >
             Solutions
           </Link>
           <Link
-            href="/blog"
+            href="/training"
             className="text-grey-900 hover:text-brand-500 px-3 py-2 text-sm font-medium"
           >
             Training
           </Link>
           <Link
-            href="/contact"
+            href="/#why-choose-us"
             className="text-grey-900 hover:text-brand-500 px-3 py-2 text-sm font-medium"
           >
             Why choose us
