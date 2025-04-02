@@ -26,7 +26,7 @@ const Header = () => {
   // Navigation links configuration
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
+    { href: "/#about-us", label: "About Us" },
     { href: "/solutions", label: "Solutions" },
     { href: "/training", label: "Training" },
     { href: "/#why-choose-us", label: "Why choose us" },

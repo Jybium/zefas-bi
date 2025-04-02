@@ -115,7 +115,7 @@ export default function HomePage() {
 
       <Hero />
 
-      <section className="py-12">
+      <section className="py-12" id="about-us">
         <div className="flex flex-col lg:flex-row lg:items-center gap-y-9 lg:gap-y-0 lg:gap-x-11 px-4 sm:px-6 lg:px-20">
           <div className="space-y-8 lg:w-1/2">
             <h2 className="text-3xl lg:text-5xl font-bold leading-[1.4]">

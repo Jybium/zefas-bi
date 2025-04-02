@@ -57,7 +57,7 @@ const PortfolioBuilder = () => {
             <Image
               src="https://res.cloudinary.com/ddynvenje/image/upload/v1742835807/zefasbi/enrol-now_jpqxst.svg"
               alt="Power BI Portfolio Builder"
-              className="w-full h-auto"
+              className="w-full "
               width={800}
               height={450}
             />

@@ -2,9 +2,11 @@
 
 import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import emailjs from "@emailjs/browser";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { ChevronDown, Calendar, MapPin, Phone } from "lucide-react";
+import SuccessModal from "../modals/success-modal";
 
 // Form validation schema
 const formSchema = z.object({
@@ -44,6 +46,7 @@ type FormValues = z.infer<typeof formSchema>;
 
 export const EnrollmentForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const {
@@ -51,7 +54,7 @@ export const EnrollmentForm: React.FC = () => {
     handleSubmit,
     control,
     watch,
-    formState: { errors },
+    formState: { errors, isValid },
   } = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -63,19 +66,56 @@ export const EnrollmentForm: React.FC = () => {
     },
   });
 
-  const onSubmit = async (data: FormValues) => {
+  function validateForm() {
+    // This function ensures that all required fields are filled and valid
+    const form = document.querySelector("form");
+    if (!form) return false;
+
+    const inputs = form.querySelectorAll("input, select, textarea");
+    let isValid = true;
+
+    inputs.forEach((input) => {
+      if (
+        (input as HTMLInputElement).required &&
+        !(input as HTMLInputElement).value.trim()
+      ) {
+        isValid = false;
+        input.classList.add("border-red-500");
+      } else {
+        input.classList.remove("border-red-500");
+      }
+    });
+
+    return isValid;
+  }
+
+  const onSubmit = async (data: any) => {
+    if (!validateForm()) return; // Validate before submitting
     setIsSubmitting(true);
 
     try {
-      // In a real application, you would send this data to your API
-      console.log("Form submitted:", data);
+      // Access the form element instead of passing data directly
+      const form = document.getElementById(
+        "enrollment-form"
+      ) as HTMLFormElement; // Explicitly cast to HTMLFormElement
 
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      if (form) {
+        await emailjs.sendForm(
+          "service_y8lexpi",
+          "template_5m7igf1",
+          form, // Pass the form element here, not the data object
+          "7o-6FC__8zpQTa0Qx"
+        );
 
-      setIsSubmitted(true);
-    } catch (error) {
+        // Show success modal here
+        setIsModalOpen(true); // Assuming you have this state
+
+        // Scroll to top after form submission
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    } catch (error: any) {
       console.error("Error submitting form:", error);
+      alert("Error submitting form: " + error.message + error);
     } finally {
       setIsSubmitting(false);
     }
@@ -83,7 +123,7 @@ export const EnrollmentForm: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <div className="bg-white p-6 rounded-lg shadow-sm">
+      <div className="bg-white lg:p-6 rounded-lg shadow-sm">
         <h2 className="text-xl font-semibold text-brand-700 mb-4">
           Thank You!
         </h2>
@@ -102,12 +142,16 @@ export const EnrollmentForm: React.FC = () => {
   }
 
   return (
-    <div className="bg-transparent p-6 rounded-lg shadow-sm lg:w-1/2">
+    <div className="bg-transparent lg:p-6 rounded-lg shadow-sm lg:w-1/2">
       <h1 className="text-xl lg:text-4xl font-medium text-brand-800 mb-6">
         Fill out the form below in order to enroll for the training.
       </h1>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="space-y-5"
+        id="enrollment-form"
+      >
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center mb-6 gap-y-4">
           <div className="flex items-center text-black">
             <Calendar className="h-4 w-4 mr-2" />
@@ -423,7 +467,7 @@ export const EnrollmentForm: React.FC = () => {
             attend this training and perform all the necessary task and
             projects?
           </p>
-          <div className="flex space-x-3">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
             <label className="flex items-center w-full">
               <input
                 type="radio"
@@ -547,13 +591,20 @@ export const EnrollmentForm: React.FC = () => {
         <div className="pt-10">
           <button
             type="submit"
-            className="w-full bg-brand-600 text-white py-3 rounded-md hover:bg-brand-700 transition-colors disabled:opacity-70"
-            disabled={isSubmitting}
+            className={`${
+              !isValid ? "bg-grey-300" : "bg-brand-600 hover:bg-brand-700"
+            } w-full text-white py-3 rounded-md  transition-colors disabled:opacity-70`}
+            disabled={isSubmitting || !isValid}
           >
             {isSubmitting ? "Sending..." : "Send Enrollment Form"}
           </button>
         </div>
       </form>
+
+      <SuccessModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 };
