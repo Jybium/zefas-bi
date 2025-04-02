@@ -14,7 +14,7 @@ const testimonials = [
   {
     name: "Waleed Salah",
     role: "Student",
-    text: "The Build with Zefas BI - Portfolio Builder was a game-changer for me. It not only enhanced my *UI design, analytical skills, and DAX proficiency* but also helped me build a standout portfolio that truly sets me apart. The hands-on projects and expert guidance transformed how I approach data storytelling and report design. I highly recommend this training to anyone serious about mastering Power BI and making an impact in the analytics space.",
+    text: "The Build with Zefas BI - Portfolio Builder was a game-changer for me. It not only enhanced my UI design, analytical skills, and DAX proficiency but also helped me build a standout portfolio that truly sets me apart. The hands-on projects and expert guidance transformed how I approach data storytelling and report design. I highly recommend this training to anyone serious about mastering Power BI and making an impact in the analytics space.",
     image: "/avatar2.png",
     link: "https://mavenanalytics.io/profile/e8b17370-40c1-7054-7c29-4333c06369ef",
   },

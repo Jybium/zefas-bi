@@ -161,7 +161,7 @@ export const EnrollmentForm: React.FC = () => {
             <Calendar className="h-4 w-4 mr-2" />
             <span className="text-sm">
               Event Timing:{" "}
-              <span className="font-semibold">April 12 , 2025</span>
+              <span className="font-semibold"> April 12 , 2025</span>
             </span>
           </div>
 
@@ -169,7 +169,7 @@ export const EnrollmentForm: React.FC = () => {
             <MapPin className="h-4 w-4 mr-2" />
             <span className="text-sm">
               Event Address:
-              <span className="font-semibold">MS Teams</span>
+              <span className="font-semibold"> MS Teams</span>
             </span>
           </div>
 
@@ -178,7 +178,7 @@ export const EnrollmentForm: React.FC = () => {
 
             <span className="text-sm">
               Contact Us:
-              <span className="font-semibold">+2348063141631</span>
+              <span className="font-semibold"> +2348063141631</span>
             </span>
           </div>
         </div>
@@ -394,8 +394,8 @@ export const EnrollmentForm: React.FC = () => {
 
         <div className="mb-6">
           <p className="text-black font-medium mb-2">
-            Training is Weekends Only Saturdays and Sundays and Time is 1pm -
-            4pm GMT+1 - Does this work with you?
+            Training is Weekends Only Saturdays and Sundays and Time is 12noon -
+            2pm GMT+1 - Does this work with you?
           </p>
           <div className="flex space-x-4">
             <label className="flex items-center w-full">

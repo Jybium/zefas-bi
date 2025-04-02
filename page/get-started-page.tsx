@@ -49,8 +49,9 @@ const solutionOptions = [
 const GetStartedPage = () => {
   const {
     register,
+    reset,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors, isSubmitting, isValid },
   } = useForm<GetStartedFormData>({
     resolver: zodResolver(getStartedFormSchema),
   });
