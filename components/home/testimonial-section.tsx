@@ -5,23 +5,23 @@ import Image from "next/image";
 
 const testimonials = [
   {
+    name: "Oluwafemi Omole",
+    role: "Student",
+    text: "The Build with Zefas BI - Portfolio Builder helped me develop a unique portfolio with a variety of projects showcasing my analytical skills. I saw analysis in a different light—not just crunching numbers, but enabling decision-making. I received exceptional value for what I paid and would gladly recommend the training to anyone looking to upskill their Power BI knowledge in analysis, UI, and critical thinking.",
+    image: "/avatar1.png",
+    link: "#",
+  },
+  {
     name: "Waleed Salah",
     role: "Student",
-    text: "Zefas training really really helped me to understand some concepts better and also successfully build my portfolio. I intend to recommend to my friends who are interested in picking up more skills too.",
-    image: "/avatar1.png",
+    text: "The Build with Zefas BI - Portfolio Builder was a game-changer for me. It not only enhanced my *UI design, analytical skills, and DAX proficiency* but also helped me build a standout portfolio that truly sets me apart. The hands-on projects and expert guidance transformed how I approach data storytelling and report design. I highly recommend this training to anyone serious about mastering Power BI and making an impact in the analytics space.",
+    image: "/avatar2.png",
     link: "#",
   },
   {
     name: "Edith Obidi",
     role: "Student",
-    text: "Zefas training really really helped me to understand some concepts better and also successfully build my portfolio. I intend to recommend to my friends who are interested in picking up more skills too.",
-    image: "/avatar2.png",
-    link: "#",
-  },
-  {
-    name: "Oluwafemi Omole",
-    role: "Student",
-    text: "Zefas training really really helped me to understand some concepts better and also successfully build my portfolio. I intend to recommend to my friends who are interested in picking up more skills too.",
+    text: "The Build with Zefas BI - Portfolio Builder has been a transformative experience. My skills in analysis, DAX, and UI design have improved significantly, and I now feel confident enough to teach even the most complex Power BI concepts. The program helped me create a wide range of projects, each showcasing my ability to solve real-world problems with data. It's a perfect fit for anyone looking to elevate their Power BI expertise and stand out in the field.",
     image: "/avatar3.png",
     link: "#",
   },

@@ -21,7 +21,7 @@ const Hero = () => {
               sense of data and unlock growth opportunities.
             </p>
             <div className="flex w-full gap-4 items-center">
-              <Button href="/contact" size="lg" className="">
+              <Button href="/get-started" size="lg" className="">
                 Get Started
               </Button>
               <Image
