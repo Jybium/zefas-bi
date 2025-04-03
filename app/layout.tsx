@@ -5,16 +5,10 @@ import { Analytics } from "@vercel/analytics/react";
 import Layout from "@/components/layout/layout";
 import Script from "next/script";
 
-const geistSans = Poppins({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
   subsets: ["latin"],
-  weight: "400",
-});
-
-const geistMono = Poppins({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500", "600", "700"], // Include all weights you need
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
@@ -39,9 +33,7 @@ export default function RootLayout({
         />
         {/* End Google Tag Manager */}
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${poppins.variable} antialiased`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
