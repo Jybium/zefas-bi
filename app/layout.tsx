@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 import Layout from "@/components/layout/layout";
 
 const geistSans = Poppins({
@@ -31,7 +32,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Layout>{children}</Layout>
+        <Layout>
+          {children}
+          <Analytics />
+        </Layout>
       </body>
     </html>
   );
